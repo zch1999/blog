@@ -25,5 +25,24 @@ module.exports = [
             './算法图解/two',
             './算法图解/three'
         ]
+    },
+    {
+        title: '深入浅出Node.js',
+        collapsable: true,
+        children: [
+            {
+                title: '第六章 理解Buffer',
+                collapsable: true,
+                children: [
+                    './node深入浅出/cap-6/1',
+                    './node深入浅出/cap-6/2',
+                    './node深入浅出/cap-6/3',
+                    './node深入浅出/cap-6/4',
+                    './node深入浅出/cap-6/5',
+                ]
+            },
+            // './node深入浅出/cap-6/1',
+            // './node深入浅出/cap-6/2',
+        ]
     }
 ]
