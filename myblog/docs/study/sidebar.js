@@ -11,7 +11,8 @@ module.exports = [
         collapsable: false,
         children: [
             './leetcode/151',
-            './leetcode/445'
+            './leetcode/445',
+            './leetcode/1282'
         ]
     },
     {
