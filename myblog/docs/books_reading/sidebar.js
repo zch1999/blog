@@ -44,5 +44,12 @@ module.exports = [
             // './node深入浅出/cap-6/1',
             // './node深入浅出/cap-6/2',
         ]
-    }
+    },
+    {
+        title: 'javascript',
+        collapsable: true,
+        children: [
+           './javascript语言精粹/1'
+        ]
+    },
 ]

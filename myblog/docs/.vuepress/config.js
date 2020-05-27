@@ -13,6 +13,7 @@ module.exports = {
           { text: '零散文章', link: '/article/' },
           { text: 'github', link: 'https://github.com/zch1999' },
         ],
+        sidebarDepth: 2,
         sidebar: require("./sidebar.js")
         // sidebar:{
         //   '/books_reading/': [
