@@ -3,6 +3,7 @@ module.exports = [
         title: 'javascript',
         collapsable: false,
         children: [
+            './javascript',
             {
                 title: 'ECMAScript 6 入门',
                 collapsable: true,
@@ -10,7 +11,17 @@ module.exports = [
                     './javascript/es6/1'
                 ]
             },
-            './javascript'
+            './javascript/context',
+            './javascript/closure',
+            './javascript/this',
+            './javascript/event_loop'
+        ]
+    },
+    {
+        title: 'javascript输出题',
+        collapsable: false,
+        children: [
+            './js_question/question'
         ]
     },
     {

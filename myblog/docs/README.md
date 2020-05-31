@@ -1,16 +1,16 @@
 ---
 home: true
 heroImage: /ocean.png
-heroText: DogStory
+heroText: From the sea
 tagline: 个人学习博客
 actionText: 快速上手 →
 actionLink: /study/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 真理名言
+  details: 做正确的事永远不会错
+- title: WHAT IS HERE
+  details: 个人学习记录所
+- title: 个人简介
+  details: 21届大三学生，在线求职，前端实习请找我，微信：HS15387850214
 footer:  备案号：赣ICP备20003686号 MIT Licensed | Copyright © 2018-present zch
 ---
