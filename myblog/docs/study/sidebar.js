@@ -28,6 +28,7 @@ module.exports = [
         title: 'leetcode',
         collapsable: false,
         children: [
+            './leetcode/quick_sort',
             './leetcode/151',
             './leetcode/445',
             './leetcode/1282',
