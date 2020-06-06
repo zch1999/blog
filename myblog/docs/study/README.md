@@ -317,3 +317,8 @@ Symbols
 | :small_blue_diamond: `:small_blue_diamond:` | :small_orange_diamond: `:small_orange_diamond:` | :small_red_triangle: `:small_red_triangle:` |
 | :small_red_triangle_down: `:small_red_triangle_down:` | :shipit: `:shipit:` |
 
+
+![avatar](./meixi1.jpg)
+![avatar](./meixi2.jpg)
+![avatar](./cc.jpg)
+![avatar](./mc.jpg)

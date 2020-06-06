@@ -33,7 +33,9 @@ module.exports = [
             './leetcode/445',
             './leetcode/1282',
             './leetcode/560',
-            './leetcode/974'
+            './leetcode/974',
+            './leetcode/long_array',
+            './leetcode/array_design'
         ]
     },
     {
