@@ -38,24 +38,18 @@ var longestConsecutive = function(nums) {
 - 好理解的先排序 O(2n)
 ```js
 var longestConsecutive = function(nums) {
-    if(nums.length == 0) return 0；
-    // 先排列数组
-    nums = nums.sort((a,b) => a - b);
-    let len = 0,max = 0;
-    for(let i=1;i<nums.length;i++){
-        // 相同直接跳过
-        if(nums[i] === nums[i-1]) continue;
-        // 判读是否连续
-        if((nums[i]-1) === nums[i-1]){
-            len++;
-            // 只要长度大约当前max长度就重新赋值
-            if(len > max){
-                max = len;
-            }
-        }else{
-            len = 0;
+    nums = nums.sort((a,b) => a-b)
+    let max = 0
+    let count = 1
+    for(let i=0; i<nums.length; i++){
+        if(nums[i] == nums[i+1]) continue
+        if(nums[i] + 1 == nums[i+1]) {
+            count++
+        } else {
+            count = 1
         }
+        max = Math.max(count,max)
     }
-    return max+1
-};
+    return max
+}
 ```
