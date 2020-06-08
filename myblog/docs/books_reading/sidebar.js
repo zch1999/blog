@@ -31,6 +31,17 @@ module.exports = [
         collapsable: true,
         children: [
             {
+                title: '第二章 模块机制',
+                collapsable: true,
+                children: [
+                    './node深入浅出/cap-2/1',
+                    './node深入浅出/cap-2/2',
+                    './node深入浅出/cap-2/3',
+                    './node深入浅出/cap-2/4',
+                    './node深入浅出/cap-2/5',
+                ]
+            },
+            {
                 title: '第六章 理解Buffer',
                 collapsable: true,
                 children: [

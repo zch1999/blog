@@ -19,14 +19,14 @@ module.exports = [
     },
     {
         title: 'javascript输出题',
-        collapsable: false,
+        collapsable: true,
         children: [
             './js_question/question'
         ]
     },
     {
         title: 'leetcode',
-        collapsable: false,
+        collapsable: true,
         children: [
             './leetcode/quick_sort',
             './leetcode/151',
@@ -42,7 +42,17 @@ module.exports = [
         title: 'css',
         collapsable: true,
         children: [
-            './css/flex'
+            './css/flex',
+            './css/position',
+            './css/center',
+            './css/Semantization'
+        ]
+    },
+    {
+        title: '手写',
+        collapsable: true,
+        children: [
+            './Handwriting/new'
         ]
     }
 ]
