@@ -14,7 +14,8 @@ module.exports = [
             './javascript/context',
             './javascript/closure',
             './javascript/this',
-            './javascript/event_loop'
+            './javascript/event_loop',
+            './javascript/ajax'
         ]
     },
     {
@@ -53,6 +54,21 @@ module.exports = [
         collapsable: true,
         children: [
             './Handwriting/new'
+        ]
+    },
+    {
+        title: 'network',
+        collapsable: true,
+        children: [
+            './network/Cross_Domain'
+        ]
+    },
+    {
+        title: 'browser',
+        collapsable: true,
+        children: [
+            './browser/1',
+            './browser/2'
         ]
     }
 ]

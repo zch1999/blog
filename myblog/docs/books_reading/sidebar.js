@@ -35,10 +35,6 @@ module.exports = [
                 collapsable: true,
                 children: [
                     './node深入浅出/cap-2/1',
-                    './node深入浅出/cap-2/2',
-                    './node深入浅出/cap-2/3',
-                    './node深入浅出/cap-2/4',
-                    './node深入浅出/cap-2/5',
                 ]
             },
             {
@@ -52,12 +48,10 @@ module.exports = [
                     './node深入浅出/cap-6/5',
                 ]
             },
-            // './node深入浅出/cap-6/1',
-            // './node深入浅出/cap-6/2',
         ]
     },
     {
-        title: 'javascript',
+        title: 'javascript语言精粹',
         collapsable: true,
         children: [
            './javascript语言精粹/1'
