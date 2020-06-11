@@ -8,7 +8,9 @@ module.exports = [
                 title: 'ECMAScript 6 入门',
                 collapsable: true,
                 children: [
-                    './javascript/es6/1'
+                    './javascript/es6/1',
+                    './javascript/es6/array',
+                    './javascript/es6/class'
                 ]
             },
             './javascript/context',
@@ -36,7 +38,9 @@ module.exports = [
             './leetcode/560',
             './leetcode/974',
             './leetcode/long_array',
-            './leetcode/array_design'
+            './leetcode/array_design',
+            './leetcode/temperature'
+
         ]
     },
     {
@@ -69,6 +73,21 @@ module.exports = [
         children: [
             './browser/1',
             './browser/2'
+        ]
+    },
+    {
+        title: 'React',
+        collapsable: true,
+        children: [
+            './React/life',
+        ]
+    },
+    {
+        title: 'VUE',
+        collapsable: true,
+        children: [
+            './vue/life',
+            './vue/state_ban'
         ]
     }
 ]

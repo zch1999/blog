@@ -62,6 +62,32 @@
 }
 ```
 
+### absolute + translate-50%
+```js
+.wp {
+    position: relative;
+}
+.box {
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+```
+## 利用flex布局实际使用时应考虑兼容性
+```js
+.container {
+  display: flex;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*水平居中*/
+}
+.containerdiv {
+  width: 100px;
+  height: 100px;
+  background-color: pink; /*方便看效果*/
+}
+```
+
 ### 计算属性calc
 这种方式也要求居中元素的宽高必须固定，所以我们为box增加size类，HTML代码如下
 ```js

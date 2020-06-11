@@ -27,6 +27,9 @@ myObj.key = value
 内置对象：String,Number,Boolean,Object,Function,Array,Date,RegExp,Error
 这些内置对象就是一些内置函数，这些内置函数可以当作构造函数来使用，从而可以构造一个对应子类型的新对象。
 
+### 属性描述符
+
+
 ### [[Get]]
 ```js
 var myObject = {
@@ -44,3 +47,5 @@ myObject.a //2
 1. 属性是否是访问描述符（参见3.3.9节）？如果是并且存在setter就调用setter。
 2. 属性的数据描述符中writable是否是false？如果是，在非严格模式下静默失败，在严格模式下抛出TypeError异常。
 3. 如果都不是，将该值设置为属性的值。
+
+### Getter和Setter
