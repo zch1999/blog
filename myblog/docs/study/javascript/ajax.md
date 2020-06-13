@@ -33,9 +33,11 @@
 ### 常见属性
 1. onreadystatechange 属性存有处理服务器响应的函数。(回调函数)
 >下面的代码定义一个空的函数，可同时对 onreadystatechange 属性进行设置：
+```js
 xmlHttp.onreadystatechange = function() {
     //我们需要在这写一些代码
 }
+```
 
 2. readyState 属性
 readyState 属性存有服务器响应的状态信息。每当 readyState 改变时，onreadystatechange 函数就会被执行。
@@ -50,11 +52,13 @@ readyState 属性可能的值：<br/>
 |4	|请求已完成（可以访问服务器响应并使用它）|
 
 >我们要向这个 onreadystatechange 函数添加一条 If 语句，来测试我们的响应是否已完成(意味着可获得数据)：<br/>
+```js
 xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState == 4) {
         //从服务器的response获得数据
     }
 }
+```
 3. responseText 属性
 可以通过 responseText 属性来取回由服务器返回的数据。
 >在我们的代码中，我们将把时间文本框的值设置为等于 responseText：
@@ -114,6 +118,43 @@ xhr.open("get", "example.php", true)
 xhr.send(null)
 ```
 
+## 实现一个ajax
+```js
+function ajax({
+  url = '',
+  method = 'get',
+  headers = {},
+  data = ''
+}){
+  return new Promise((resolve, reject) => {
+    var xhr;
+    if (window.XMLHttpRequest) { // code for IE7+, firefox, Chrome, Opera, Safari
+      xhr = new XMLHttpRequest();
+    } else {
+      xhr = new ActiveXObject('Microsoft.XMLHttp'); // code for IE6, IE5
+    }
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status >= 200 && xhr.status <300 || xhr.status === 304) {
+          try {
+            var response = JSON.parse(xhr.responseText); // 获取数据
+            resolve(response);
+          } catch (e) {
+            reject(e);
+          }
+        } else {
+          reject(new Error('Request failed: ' + xhr.statusText));
+        }
+      }
+    }
+    xhr.open(method, url, true); // 同步或异步请求：默认为 true(true 异步, false 同步)
+    for (let key in headers) {
+      xhr.setRequestHeader(key, headers[key]);
+    }
+    xhr.send(JSON.stringify(data));
+  })
+}
+```
 
 
 ## 常见问题

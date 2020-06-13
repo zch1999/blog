@@ -11,13 +11,11 @@
 var dailyTemperatures = function(T) {
     let res = []
     for(let i= 0; i< T.length; i++) {
-        let max = 0
         let count = 0
         for(let j = i+1; j< T.length; j++){
             if(T[j] > T[i]){
                 count++
-                max=Math.max(count,max)
-                res.push(max)
+                res.push(count)
                 break
             }
             count++

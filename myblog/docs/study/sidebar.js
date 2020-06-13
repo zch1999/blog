@@ -57,7 +57,8 @@ module.exports = [
         title: '手写',
         collapsable: true,
         children: [
-            './Handwriting/new'
+            './Handwriting/new',
+            './Handwriting/bind',
         ]
     },
     {
