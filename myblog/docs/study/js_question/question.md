@@ -194,3 +194,153 @@ setInterval(() => console.log("Hi"), 1000);
 
 </details>
 
+
+## catch块作用域
+```js
+(() => {
+  let x, y;
+  try {
+    throw new Error();
+  } catch (x) {
+    (x = 1), (y = 2);
+    console.log(x);
+  }
+  console.log(x);
+  console.log(y);
+})();
+
+A: 1 undefined 2
+B: undefined undefined undefined
+C: 1 1 2
+D: 1 undefined undefined
+```
+
+<details>
+<summary>答案</summary>
+
+答案: A
+catch块接收参数x。当我们传递参数时，这与变量的x不同。这个变量x是属于catch作用域的。
+之后，我们将这个块级作用域的变量设置为1，并设置变量y的值。 现在，我们打印块级作用域的变量x，它等于1。
+在catch块之外，x仍然是undefined，而y是2。 当我们想在catch块之外的console.log(x)时，它返回undefined，而y返回2。
+
+</details>
+
+## 引用类型
+```js
+var a = {n: 1}
+var b = a
+a.x = a = {n: 2}
+
+console.log(a.n, b.n);
+console.log(a.x, b.x);
+
+```
+<details>
+<summary>答案</summary>
+
+2 1
+
+undefined {n: 2}
+
+var b = a,此时a和b指向同一个对象。
+
+.运算符比 = 运算符高,先计算`a.x`,此时 
+b = {
+    n:1,
+    x:undefined
+}
+
+相当于给对象添加了x属性。
+
+a.x = a = {n:2};
+
+计算完a.x,再计算 = ,赋值是从右向左,此时a指向一个新对象。
+a = {
+    n:2
+}
+
+a.x已经执行过了,此时对象的x属性赋值为a,此时
+
+对象 = {
+    n:1,
+    x:{
+        n:2
+    }
+}
+
+即:
+a = {
+    n:2
+}
+
+b = {
+    n:1,
+    x:{
+        n:2
+    }
+}
+
+</details>
+
+
+## 变量提升
+```js
+console.log(c);
+var c;
+function c(a) {
+    console.log(a);
+    var a = 3;
+    function a(){
+    }
+}
+c(2);
+```
+<details>
+<summary>答案</summary>
+
+```js
+// 输出 
+
+function c(a){
+    console.log(a);
+    var a = 3;
+    function a(){
+    }
+}
+
+function a(){
+}
+变量提升也有优先级, 函数声明 > arguments > 变量声明
+```
+
+</details>
+
+## 变量提升
+```js
+var c = 1;
+function c(c) {
+    console.log(c);
+    var c = 3;
+}
+console.log(c);
+c(2);
+```
+
+<details>
+<summary>答案</summary>
+
+```js
+//  输出
+
+1
+
+TypeError: c is not a function
+
+由于函数声明会提升,当函数外的console.log(c)执行时,c已经被赋值为1。因此,执行c(2)时会抛出TypeError,因为1不是函数。
+```
+
+</details>
+
+
+
+

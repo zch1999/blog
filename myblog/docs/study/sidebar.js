@@ -17,14 +17,16 @@ module.exports = [
             './javascript/closure',
             './javascript/this',
             './javascript/event_loop',
-            './javascript/ajax'
+            './javascript/ajax',
+            './javascript/constructor',
         ]
     },
     {
-        title: 'javascript输出题',
+        title: 'javascript输出题，场景题',
         collapsable: true,
         children: [
-            './js_question/question'
+            './js_question/question',
+            './js_question/file_upload',
         ]
     },
     {
@@ -39,7 +41,8 @@ module.exports = [
             './leetcode/974',
             './leetcode/long_array',
             './leetcode/array_design',
-            './leetcode/temperature'
+            './leetcode/temperature',
+            './leetcode/recover_ip',
 
         ]
     },
@@ -50,7 +53,11 @@ module.exports = [
             './css/flex',
             './css/position',
             './css/center',
-            './css/Semantization'
+            './css/Semantization',
+            './css/selector',
+            './css/float',
+            './css/triangle',
+            './css/drag',
         ]
     },
     {
@@ -73,7 +80,8 @@ module.exports = [
         collapsable: true,
         children: [
             './browser/1',
-            './browser/2'
+            './browser/2',
+            './browser/cache',
         ]
     },
     {
