@@ -27,9 +27,20 @@
 // })
 
 
-for(var i=0; i<3; i++) {
-  (function(i) {
-  setTimeout(() => {
-      console.log(i)
-  },2000)})(i)
+// for(var i=0; i<3; i++) {
+//   (function(i) {
+//   setTimeout(() => {
+//       console.log(i)
+//   },2000)})(i)
+// }
+
+var b=2
+function s1() {
+  var b = 3
+  s2()
 }
+function s2(){
+  b++
+  console.log(b)
+}
+s1()
