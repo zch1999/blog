@@ -36,6 +36,7 @@ module.exports = [
             './leetcode/quick_sort',
             './leetcode/151',
             './leetcode/445',
+            './leetcode/flatten-a-multilevel-doubly-linked-list',
             './leetcode/1282',
             './leetcode/560',
             './leetcode/974',
