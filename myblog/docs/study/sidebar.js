@@ -90,6 +90,7 @@ module.exports = [
         collapsable: true,
         children: [
             './React/life',
+            './React/summary',
         ]
     },
     {
