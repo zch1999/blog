@@ -10,7 +10,6 @@ module.exports = {
           { text: '首页', link: '/' },
           { text: '个人学习', link: '/study/' },
           { text: '读书笔记', link: '/books_reading/' },
-          { text: '零散文章', link: '/article/' },
           { text: 'github', link: 'https://github.com/zch1999' },
         ],
         sidebarDepth: 2,
