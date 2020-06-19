@@ -62,7 +62,7 @@
 }
 ```
 
-### absolute + translate-50%
+### absolute + translate-50% 不需要知道宽高
 ```js
 .wp {
     position: relative;
