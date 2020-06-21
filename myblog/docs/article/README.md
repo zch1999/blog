@@ -93,3 +93,102 @@ TCP/IP四层
 
 7. 为什么会有微任务
 页面任务活起来，主要是一个消息队列，所有的任务都会进入消息队列，
+
+## ES6
+### promise
+三个状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）
+.then 里的回调函数通过状态来执行相应的操作
+```js
+<script>
+  function CutePromise(executor) {
+    this.status = 'pending';
+    this.value = null;
+    this.reason = null;
+    this.onFulfilledCbs = [];   // 数组
+    this.onRejectedCbs = [];    // 
+    // 怎么知道 调用了：
+    // resolve  -> fulfilled
+    // reject   -> rejected
+    let self = this;
+    function resolve(value) {
+      console.log('resolve called');
+      self.status = 'fulfilled';
+      self.value = value;
+      // console.log('val', value);
+      // 让 then onFulfilled 回调调用
+      for (let fn of self.onFulfilledCbs) {
+        fn(value);
+      }
+    }
+    function reject(reason) {
+      self.status = 'rejected';
+      self.reason = reason;
+      // // 让 then onRejected 回调调用
+      for (let fn of self.onRejectedCbs) {
+        fn(reason);
+      }
+    }
+    executor(resolve, reject);
+  }
+  CutePromise.prototype.then = function(onFulfilled, onRejected) {
+    let self = this;
+    if (self.status === 'fulfilled') {
+      onFulfilled(self.value);
+    } else if (self.status === 'rejected') {
+      onRejected(self.reason);
+    } else if (self.status === 'pending') {
+      // onFulfilled onRejected 先等着 等着 resolve() reject()
+      // 才会执行
+      self.onFulfilledCbs.push(onFulfilled);
+      self.onRejectedCbs.push(onRejected);
+    }
+  }
+  let p=new Promise((resolve, reject) => {
+    // resolve(6666);
+    // 成功时候的值 通过 resolve 传给
+    // reject('err')
+    setTimeout(() => {
+      // 2000 => fulfilled
+      resolve(6666);
+    }, 2000)
+  })
+
+  let o =new Promise((resolve, reject) => {
+    // resolve(6666);
+    // 成功时候的值 通过 resolve 传给
+    // reject('err')
+    setTimeout(() => {
+      // 2000 => fulfilled
+      resolve(6);
+    }, 1000)
+  })
+  // .then(() => {
+  //   console.log('2th then')
+  // })
+  Promise.myAll = function (promises){
+    return new Promise((resolve,reject) => {
+      let count = 0
+      let res = []
+      for(let i=0;i<promises.length; i++){
+        promises[i].then(x => {
+          // console.log(x)
+          count++
+          res[i] = x
+          if(count == promises.length){
+            resolve(res)
+          }
+        }).catch(err => {
+          console.log(err)
+        })
+      }
+    })
+  }
+  Promise.myAll([p,o]).then(x => {
+    console.log(x)
+  })
+</script>
+```
+
+缺点： 一旦创建就无法停止；当promise处于pedding状态时，无法确定它是成功还是失败；如果不设置回调函数，promise内部的错误不会反应到外部；then实际也是返回一个promise，多次调用耗性能
+
+### 
