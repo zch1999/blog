@@ -5,3 +5,11 @@
 - 新建一个vue实例
   event.$emit() -> event.$on(''),用完及时销毁event.$off()
 ## 组件生命周期
+beforeCreated 
+Created
+beforeMount
+Mounted
+beforeUpdate
+Update
+beforeDestory
+Destoryed
