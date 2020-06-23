@@ -119,10 +119,33 @@ TCP/IP四层
 ## 微医集团
 1. 介绍一下项目
 2. egg的进程你了解吗
-  worker
+  worker master agent
+ - 进程崩了出了问题怎么办？
 3. nextTick你觉得可以用什么来实现(个人promsie,setTimeout)
-  nextTick就是异步的获取一个DOM节点，用mutationObserver来实现
+  nextTick就是异步的获取一个DOM节点，用mutationObserver+ 事件循环来实现
+4. 微任务 宏任务
 
+## 罗辑思维
+1. 介绍项目
+2. tarnsform怎么使用
+3. 分页请求怎么做
+4. http1.0 1.1
+5. 状态码 
+6. ip地址改变了怎么办？DNS查询的方法
+7. MD5之类的加密算法了解吗，用户名密码怎么做加密
+8. webpack配置流程
+
+## 帷幄
+1. 原型和原型链,查看原型链上是否有某个对象
+2. redux的流程了解吗
+3. 重排和重绘
+4. react的key是干嘛的
+5. diff算法原理
+6. for..in.. for..of
+
+## 工猫二面
+1. setState是同步的还是异步的
+（聊天聊了半个多小时，没问啥技术）
 ## ES6
 ### promise
 三个状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）
