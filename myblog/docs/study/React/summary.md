@@ -75,6 +75,24 @@ react中的ref是用React.createRef()创建出来，
 2. 父组件z-index太小
 3. fixed需要放在body第一层
 
+## vdom和diff算法
+ceateElement创建一个虚拟dom，ceateElement(type,props,children)
+然后通过render函数，第一步创建一个child节点，通过for in 遍历dom，通过key和setArrt去做相关节点的属性的设置
+setArrt(node,key,dom.props[key])-> switch(key) 去做相应的属性设置
+obj.foreach() -> 判断是否是虚拟dom 如果是就递归render，如果不是就创建真实节点，并插入到child中
+renderDom(el,target) 实际使用就像 renderDom(el, document.getElementById('root')
+
+- diff算法
+首先就是用一个patch对象记录补丁，调用写好的walk函数，walk(oldTree, newTree, index, patches);
+walk函数就是先创建一个current记录数组，判断是否又新节点：
+  - 没有if(!newNode) -> current.push ->  type:REMOVE
+  - 判断是否是文本，是就判断文本值是否改变，current.push -> type: text + newNode
+  - 判断属性是否改变 调用diffAttr
+    - diffAttr 就是返回小补丁patch -> for..in 改变和新增的放入补丁
+    把属性改变放入current记录，判断是否有子结点，有就做walk
+  - 有新节点替换，current.push-> type: replace+ newNode
+  - 把current给到patch
+
 ## context
 公共信息(语言，主题)的传递传递到每个组件
 用props太繁琐
