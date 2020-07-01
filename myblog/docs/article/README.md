@@ -147,9 +147,13 @@ TCP/IP四层
 5. diff算法具体怎么做的
 6. for..in.. for..of
 
-## 工猫二面（一面忘了）
-1. setState是同步的还是异步的
-（聊天聊了半个多小时，没问啥技术）
+## 快手一面
+1. 基本数据类型，引用数据类型
+2. null 和 undefined的区别
+3. Object.prototype.toString.call()的原理
+4. 能不能重写上面这个？它和Object.toString()的区别
+  可以重写，重写就是在Function，Array上重写，当我们调用集体的实例.toString()时，调用的就是重写后的方法，例如function就是返回函数体的字符串，Array就是元素的字符串，所以我们判断类型要用Object上的toString
+5. 
 
 ## 面试点
 阻止冒泡的方法： w3c - e.Propagation;  ie - e.cancelBubble = true 
@@ -164,6 +168,7 @@ TCP/IP四层
   京东仓
 6. 预加载怎么做
 7. SEO如何优化
+8. setState是同步的还是异步的
 
 ## ES6
 ### promise
