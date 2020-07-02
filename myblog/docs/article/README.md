@@ -78,7 +78,7 @@ TCP/IP四层
   - 网络层
   - 网络接口层
 五层模型
-  - 应用层
+  - 应用层 http，DNS
   - 传输层 tcp/udp
   - 网络层 ip
   - 数据链路层
@@ -150,10 +150,42 @@ TCP/IP四层
 ## 快手一面
 1. 基本数据类型，引用数据类型
 2. null 和 undefined的区别
+  null代表空值，undefined代表未定义
 3. Object.prototype.toString.call()的原理
 4. 能不能重写上面这个？它和Object.toString()的区别
-  可以重写，重写就是在Function，Array上重写，当我们调用集体的实例.toString()时，调用的就是重写后的方法，例如function就是返回函数体的字符串，Array就是元素的字符串，所以我们判断类型要用Object上的toString
-5. 
+  可以重写，重写就是在Function，Array之类的类型实例上重写，当我们调用具体的实例.toString()时，调用的就是重写后的方法，例如function就是返回函数体的字符串，Array就是数组元素的字符串，所以我们判断类型要用Object上的toString方法
+5. async本质是个啥？await后得到的是一个什么值
+6. 多用户登录
+  - session.id去做判断
+  6.1  一台电脑，一个浏览器登录多个用户怎么判断是哪个用户？ 同源策略？
+  6.2 跨域相关
+  6.3 cors为什么有非简单请求
+7. 为什么有webpack，devserver用过没有（webpack我不会，白学了）
+8. 闭包的作用
+9. redux的流程，作用，为什么有这个，没有这个怎么传？
+10. react和vue组件传值
+11. 行内元素和块级元素的区别，他们的margin和padding怎么样
+12. BFC是什么，作用？
+13. 垂直水平居中
+14. 5层模型，具体有什么协议
+
+### 快手二面
+1. 合并两个有序数组，并排序
+2. 斐波那契数列，开头为1，2。fib(N)，leetcode有原题，简单题
+3. 百度首页怎么做，底部的footer样式怎么写
+4. 定位
+5. this指向
+...想不起来了
+n. 你有什么优势？
+
+## 百度
+1. 多户用登录session怎么处理
+2. 垂直居中
+3. promise相关
+4. 数组方法自己说
+5. react-touter原理
+6. redux流程
+...忘了
 
 ## 面试点
 阻止冒泡的方法： w3c - e.Propagation;  ie - e.cancelBubble = true 
