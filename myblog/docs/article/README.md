@@ -1,4 +1,5 @@
 # 面试记录
+- 简历不要作死，不熟的就别写，很多面试官看着简历问的,下面回答不全，建议自己找答案。
 ## 雨花石一面
 1. var let const
   let，const产生块级作用域，不能重复声明,不会绑定全局对象，var会绑定全局对象，var会变量提升，let,const变量提升后会处于一个暂时性死区，
@@ -6,26 +7,9 @@
   浅拷贝如果拷贝的是基本数据类型就直接拷贝值，如果拷贝的是对象，是拷贝一个指向对象堆内存的地址指针。也就是说它们引用的还是同一个对象，浅拷贝例如
     - Object.assign()
     - Array.slice(),Array.concat()
-    - 
-    ```js
-      function shallClone(target) {
-        if(typeof(target) == 'object' && target !== null) {//拷贝的对象为引用类型
-          let targetClone = Array.isArray(target) ? [] : {}
-          for(let prop in target) {
-            if(target.hasOwnProperty(prop)) { //是否是target的属性
-              targetClone[prop] = target[prop]
-            }
-          }
-        } else {
-          return target
-        }
-      }
-    ```
   深拷贝，简单来说就是拷贝一个一样的全新的对象，它和被拷贝对象没有关联
 
 3. 谈谈promise，promise的优缺点
-  - 解决回调地狱，
-  - 一当
 4. jsonp的原理及缺点
   script可以跨域，通过回调里携带参数，请求服务器后，服务器给到相应的参数，就可以请求了
   缺点： 只能用get，安全问题(容易受到xss攻击)
@@ -53,6 +37,7 @@
     1. 静态资源的压缩
     2. 服务端开启gzip压缩，如果部署express作服务器的话，使用中间件compression即可开启gzip压缩
     3. 使用缓存，express.static()
+    。。。。
 2. 遇到了什么安全性问题？
 3. express的缓存了解吗
 express.static
@@ -160,21 +145,21 @@ TCP/IP四层
   6.1  一台电脑，一个浏览器登录多个用户怎么判断是哪个用户？ 同源策略？
   6.2 跨域相关
   6.3 cors为什么有非简单请求
-7. 为什么有webpack，devserver用过没有（webpack我不会，白学了）
+7. 为什么有webpack，devserver用过没有（webpack我忘的差不多了，白学了）
 8. 闭包的作用
 9. redux的流程，作用，为什么有这个，没有这个怎么传？
 10. react和vue组件传值
 11. 行内元素和块级元素的区别，他们的margin和padding怎么样
 12. BFC是什么，作用？
 13. 垂直水平居中
-14. 5层模型，具体有什么协议
 
 ### 快手二面
-1. 合并两个有序数组，并排序
-2. 斐波那契数列，开头为1，2。fib(N)，leetcode有原题，简单题
+1. 合并两个有序数组，并排序，不能用cancat(),sort()
+2. 斐波那契数列，开头为1，2。fib(N)，leetcode有类似题，简单题
 3. 百度首页怎么做，底部的footer样式怎么写
 4. 定位
 5. this指向
+6. 5层模型，具体有什么协议
 ...想不起来了
 n. 你有什么优势？
 
@@ -202,7 +187,7 @@ n. 你有什么优势？
 7. SEO如何优化
 8. setState是同步的还是异步的
 
-## ES6
+## ES6(都看看，promise绝对的常考题)
 ### promise
 三个状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）
 .then 里的回调函数通过状态来执行相应的操作
@@ -297,4 +282,7 @@ n. 你有什么优势？
 </script>
 ```
 
-缺点： 一旦创建就无法停止；当promise处于pedding状态时，无法确定它是成功还是失败；如果不设置回调函数，promise内部的错误不会反应到外部；then实际也是返回一个promise，多次调用耗性能
+- 缺点： 一旦创建就无法停止；当promise处于pedding状态时，无法确定它是成功还是失败；如果不设置回调函数，promise内部的错误不会反应到外部；then实际也是返回一个promise，多次调用耗性能
+
+## 感悟
+ **失败没关系，多面试多总结，这个很重要** 祝大家拿到心仪的offer!!!
