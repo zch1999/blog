@@ -12,5 +12,6 @@ features:
   details: 个人学习记录所
 - title: 个人简介
   details: 21届大三学生，在线求职，前端实习请找我，微信：HS15387850214
-footer:  备案号：赣ICP备20003686号 MIT Licensed | Copyright © 2018-present zch
+footer: MIT Licensed | Copyright © 2018-present zch
 ---
+<footerpage />
