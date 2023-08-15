@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "zsh deloy.sh"
+    "deploy": "sudo yarn build && sudo bash deploy.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vuepress": "^1.6.0"
+    "prismjs": "^1.23.0",
+    "vuepress": "^1.8.0"
   }
 }
