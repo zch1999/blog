@@ -53,7 +53,7 @@ module.exports = [
   {
     title: "HTML",
     collapsable: true,
-    children: ["./html/doctype"],
+    children: ["./html/doctype", "./html/seo"],
   },
   {
     title: "CSS",
