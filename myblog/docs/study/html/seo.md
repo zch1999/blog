@@ -13,4 +13,4 @@
 
 ### 常见的语义化标签
 
-![](./seoimg.jpg)
+![seo](./seoimg.jpg)

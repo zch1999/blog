@@ -1,12 +1,3 @@
-<!--
- * @Author: zch1999 1901394767@qq.com
- * @Date: 2020-12-06 15:14:17
- * @LastEditors: zch1999 1901394767@qq.com
- * @LastEditTime: 2023-08-27 23:45:51
- * @FilePath: /blog/myblog/docs/study/handwriting/bind.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
-
 # 手写 bind
 
 ## apply,call 和 bind 的作用
